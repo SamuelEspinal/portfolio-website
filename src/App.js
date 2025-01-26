@@ -7,7 +7,7 @@ import Introduction from "./components/Introduction";
 import AboutMe from "./components/AboutMe";
 import ContactMe from "./components/ContactMe";
 //import Highlight from "./components/Highlight";
-import Chatbot from "./components/Chatbot";
+//import Chatbot from "./components/Chatbot";
 import ProjectsPage from "./components/ProjectsPage";
 import ScorpionChess from "./projects/ScorpionChess";
 import NecromanticSaga from "./projects/NecromanticSaga";
@@ -35,6 +35,7 @@ const Layout = () => {
                   </svg>
                 </div>
                 <Introduction />
+                {/*<Highlight />*/}
                 <div className="wave-separator">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path
@@ -55,7 +56,7 @@ const Layout = () => {
             element={
               <>
                 <ProjectsPage/>
-                <Chatbot />
+                {/*<Chatbot /> This feature is under developement*/}
                 <div className="wave-separator">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path
