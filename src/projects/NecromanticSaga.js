@@ -16,7 +16,9 @@ const NecromanticSaga = () => {
             className="rpg-game-image"
           />
         </div>
-        <p>Breakdown Coming Soon</p>
+        <div className="rpg-game-header">
+          <h1>Breakdown Coming Soon</h1>
+        </div>
         <div className="rpg-game-links">
           <a href="https://github.com/SamuelEspinal/RPG-Game" target="_blank" rel="noopener noreferrer">
             View Source Code
