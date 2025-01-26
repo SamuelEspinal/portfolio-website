@@ -94,3 +94,26 @@
   color: #ffbe5c;
 }
 
+.button-group {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cta-button {
+  background-color: #fca311;
+  color: #1a1a1d;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #ffbe0b;
+  transform: scale(1.05);
+}
+
+

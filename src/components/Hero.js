@@ -24,7 +24,17 @@ const Hero = () => {
       <div className="hero-content">
         <h1>{renderAnimatedText(HeaderName)}</h1>
         <p>Software Developer | Creator | Innovator</p>
-        <Link to="/projects" className="cta-button">View My Projects</Link>
+        <div className="button-group">
+          <Link to="/projects" className="cta-button">View My Projects</Link>
+          <a
+            href="https://github.com/SamuelEspinal/portfolio-website"
+            className="cta-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Site Source Code
+          </a>
+        </div>
       </div>
     </section>
   );
