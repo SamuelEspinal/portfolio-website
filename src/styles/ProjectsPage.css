@@ -1,0 +1,72 @@
+.projects-page {
+  padding: 50px 20px;
+  color: white;
+  background-color: #1a1a1d;
+  text-align: center;
+}
+
+.projects-page h1 {
+  font-size: 3rem; /* Make the title stand out more */
+  margin-bottom: 40px;
+  color: #fca311;
+  text-align: center;
+  margin-top: 50px; /* Pushes it away from the header */
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px; /* Adjust the gap between cards */
+  margin-top: 50px;
+  flex-wrap: wrap; /* Allow cards to wrap for better responsiveness */
+}
+
+.projectPage-card {
+  position: relative;
+  width: 40%; /* Scale down to 40% of the original size */
+  height: 400px;
+  max-width: 400px; /* Max width to ensure it doesn't get too large */
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 15px; /* Add more rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectPage-card:hover {
+  transform: translateY(-15px); /* Lift more to make it pop */
+  box-shadow: 0px 10px 30px rgba(255, 168, 7, 0.6); /* Add a more prominent shadow */
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Ensure the image fills the card */
+  background-size: cover; /* Scale and crop to cover the card area */
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px; /* Match card corners */
+  display: flex;
+  align-items: flex-end; /* Align the content to the bottom */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Reduce spacing for smaller screens */
+  }
+
+  .project-card {
+    width: 90%; /* Full width for smaller screens */
+  }
+
+  .card-content h2 {
+    font-size: 1.3rem; /* Adjust title size for smaller screens */
+  }
+
+  .card-content p {
+    font-size: 0.9rem; /* Adjust description size */
+  }
+}

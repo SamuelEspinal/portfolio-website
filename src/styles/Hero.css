@@ -1,0 +1,96 @@
+@keyframes heroEntrance {
+  0% {
+    opacity: 0; /* Start invisible */
+    transform: translateY(5vw) scale(0.95); /* Start lower and slightly smaller */
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-1vw) scale(1.02); /* Bounce up slightly */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1); /* Settle at the final position */
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  color: #ffffff;
+  padding: 2rem;
+  margin-bottom: -85px;
+
+  /* Animated Gradient background */
+  background: linear-gradient(-45deg, #1a1a1d, #4e4e50, #313131, #1a1a1d);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+.hero-content {
+  margin-bottom: 10vw;
+  animation: heroEntrance 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards; /* Smooth bounce easing */
+  opacity: 0; /* Start invisible until animation begins */
+}
+
+.hero h1 {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #dddddd;
+}
+
+.hero .cta {
+  background-color: #fca311;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5vw;
+  transition: background-color 0.3s ease;
+}
+
+.hero .cta:hover {
+  background-color: #ffbe0b;
+}
+
+.animated-letters {
+  display: inline-block; /* Allows animation for each letter */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth animation */
+  color: #ffffff; /* Default letter color */
+  cursor: pointer; /* Indicates interactivity */
+}
+
+.animated-letters:hover {
+  transform: translateY(-.7vw); /* Move the letter up */
+  color: #fca311; /* Change color on hover */
+}
+
+.animated-letters.nearby {
+  transform: translateY(-.3vw);
+  color: #ffbe5c;
+}
+

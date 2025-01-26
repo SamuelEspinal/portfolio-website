@@ -1,0 +1,31 @@
+.shakespeare-ai-page {
+    padding: 20px;
+    background-color: #1a1a1d;
+    color: rgb(228, 227, 227);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 20px; /* Space between items */
+  }
+  
+  .content h1 {
+    font-size: 2.5rem;
+    color: #fca311;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .content p {
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-style: italic;
+  }
+  

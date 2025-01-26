@@ -1,0 +1,104 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding-top: 80px; /* Adjust this value based on your header height */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1a1a1d;
+  line-height: 1.6;
+  color: #333;
+  overflow-y: scroll; /* Ensure scrollbars are always visible */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cta-button {
+  background-color: #fca311;
+  color: #000000;
+  padding: .5vw 1vw;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #ffb642;
+  transition: background-color 0.3s ease;
+}
+
+/* Wave Separator */
+.wave-separator {
+  margin-top: -85px; /* Prevent gap between sections */
+  line-height: 0;
+}
+
+.hero-separator {
+  position: relative;
+  top: 100%; /* Position it at the bottom of the Hero */
+  left: 0;
+  width: 100%;
+  height: auto;
+  margin-top: -300px;
+  z-index: 1; /* Place it on top of the Hero background */
+}
+
+.wave-separator svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Scrollbar Styling for WebKit Browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1d; /* Dark background for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fca311; /* Orange color for the thumb */
+  border-radius: 10px; /* Rounded edges for the thumb */
+  border: 3px solid #1a1a1d; /* Padding around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ffbe0b; /* Lighter orange when hovered */
+}
+
+/* Scrollbar Styling for Firefox */
+html {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #fca311 #1a1a1d; /* Thumb color, track color */
+}
+
+/* Smooth Scrolling for the Page */
+html {
+  scroll-behavior: smooth;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

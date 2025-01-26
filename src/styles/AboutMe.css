@@ -1,0 +1,83 @@
+.about-me-page {
+    padding: 20px;
+    background-color: #1a1a1d;
+    color: #e4e3e3;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.about-me-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.about-me-image img {
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-me-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #2c2c34;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-me-container h1 {
+    font-size: 2.5rem;
+    color: #fca311;
+    margin-bottom: 20px;
+}
+
+.about-me-container p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #d6d6d6;
+}
+
+.about-me-container p:last-child {
+    margin-bottom: 0;
+}
+
+.word-highlight {
+    color: #fca311; 
+    font-weight: bold;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fca311;
+    color: #1a1a1d;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+.contact-button:hover {
+    background-color: #ffbe0b;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .about-me-container {
+        padding: 15px;
+    }
+
+    .about-me-container h1 {
+        font-size: 2rem;
+    }
+
+    .about-me-container p {
+        font-size: 1rem;
+    }
+}

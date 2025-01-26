@@ -1,0 +1,49 @@
+.introduction {
+  padding: 1vw 2vw;
+  background-color: #1a1a1d;
+  color: #1d3557;
+  text-align: center;
+}
+
+.intro-content h2,
+.intro-content p {
+  opacity: 1; /* Fallback: Make visible */
+  transform: translateY(50px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.introduction.visible .intro-content h2 {
+  opacity: 1; /* Fade-in */
+  transform: translateY(0); /* Bring it to normal position */
+  color: #fca311;
+}
+
+.introduction.visible .intro-content p {
+  opacity: 1; /* Fade-in */
+  transform: translateY(0); /* Bring it to normal position */
+}
+
+.introduction .intro-content h2 {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px);
+  color: #fca311;
+}
+
+.introduction .intro-content p {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px);
+}
+
+.intro-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff; /* Darker tone for headers */
+}
+
+.intro-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #ffffff;
+}

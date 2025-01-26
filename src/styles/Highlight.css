@@ -1,0 +1,117 @@
+/* Highlight Section */
+.highlight {
+  margin-bottom: -220px;
+  padding: 50px 20px;
+  background-color: #1a1a1d;
+  text-align: center;
+  color: #fca311;
+}
+
+.highlight h2 {
+  margin-bottom: 30px;
+  color: #fca311;
+  font-size: 2.5rem;
+}
+
+/* Project Cards Container */
+.project-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Project Card Styles */
+.project-card {
+  position: relative;
+  width: 15vw;
+  min-height: 5vw; 
+  border-radius: 1.5vw;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1); /* Glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(.5vw);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: .8vw;
+  margin-bottom: 10vw;
+}
+
+
+/* Hover Animation */
+.project-card:hover {
+  transform: translateY(-10px); /* Floating effect */
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3); /* Elevated shadow on hover */
+}
+
+/* Project Card Image */
+.project-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensures the image stays behind content */
+  filter: brightness(70%); /* Slightly darken the image */
+  transition: filter 0.3s ease;
+}
+
+.project-card:hover .project-card-image {
+  filter: brightness(100%); /* Brighten the image on hover */
+}
+
+/* Project Card Content */
+.project-card-content {
+  position: relative;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  z-index: 1; /* Ensure content is above the image */
+}
+
+.project-card-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fca311;
+}
+
+.project-card-content p {
+  margin: 0 0 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.project-card-content .btn {
+  padding: 10px 15px;
+  background-color: #fca311;
+  color: #1a1a1d;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-card-content .btn:hover {
+  background-color: #ffbe5c;
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-cards {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,227 @@
+.chatbot-container {
+  position: fixed;
+  bottom: .5vw;
+  right: 1vw;
+  z-index: 1000;
+}
+
+/* Chat Bubble Icon */
+.chat-bubble {
+  width: 60px;
+  height: 60px;
+  background-color: #fca311;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat-bubble:hover {
+  background-color: #ff9a00;
+  transform: scale(1.1); /* Slight scale-up effect */
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+.chat-bubble.active {
+  background-color: #ff9a00;
+  transform: rotate(45deg) scale(1.1); /* Rotate to indicate open state */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* More prominent shadow */
+}
+
+/* Chatbot Window */
+.chatbot {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 400px;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+  opacity: 0;
+  transform: scale(0.8);
+  visibility: hidden;
+}
+
+.chatbot.open {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+
+.chatbot.closed {
+  opacity: 0;
+  transform: scale(0.8);
+  visibility: hidden;
+}
+
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: rgb(255, 255, 255);
+}
+
+.chat-header {
+  background-color: #fca311;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  align-content: right;
+  text-align: center;
+  font-size: 20px;
+}
+
+.chat-body {
+  flex: 1; /* Allows the body to take available space */
+  padding: 10px;
+  overflow-y: auto; /* Enables vertical scrolling */
+  scrollbar-width: 10px; /* Hides scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar for IE and Edge */
+  position: relative;
+}
+
+.chat-body::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for Chrome, Safari, and Edge */
+}
+
+.chat-message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.chat-message.bot {
+  background-color: #f0f0f0;
+  align-self: flex-start;
+  color: #333;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chat-message.user {
+  background-color: #fca311;
+  align-self: flex-end;
+  color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chat-footer {
+  padding: 15px 20px;
+  display: flex;
+  position: sticky;
+  bottom: 0%;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  background: rgba(255, 255, 255);
+  z-index: 10;
+}
+
+.chat-footer button {
+  background-color: #fca311;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow to separate from body */
+}
+
+.chat-footer button:hover {
+  background-color: #ff9a00;
+}
+
+/* Typing Indicator */
+.typing-indicator {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.typing-indicator .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #fca311;
+  border-radius: 50%;
+  animation: typing 1.5s infinite;
+}
+
+.typing-indicator .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-indicator .dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Pop-in animation for suggestions */
+.animate-pop {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: pop-in 0.3s ease forwards;
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Chatbot Footer Suggestions */
+.chat-footer button.suggestion {
+  background-color: #fca311;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chat-footer button.suggestion:hover {
+  background-color: #ffbc50;
+}
+
+@keyframes typing {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+/* Fade-in animation for bot messages */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-message.bot.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
