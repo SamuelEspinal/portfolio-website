@@ -240,15 +240,15 @@ private static int score(final Player player,
           <br></br>
           <p>
             The AI in my engine uses a <span className="word-highlight">Min-Max Algorithm</span> to determine the best move. 
-            The Min-Max Algorithm is a decision making method used in zero-sum games and artificial intelligence.
-            It works by creating a tree where each node in the tree represents a certain state in the game,
-            branching out into all potential moves by both players (limited to a certain defined depth). At the terminal nodes of the tree,
+            The Min-Max Algorithm is a decision making method used in zero-sum games and artificial intelligence. 
+            It works by creating a tree where each node in the tree represents a certain state in the game, 
+            branching out into all potential moves by both players (limited to a certain defined depth). At the terminal nodes of the tree, 
             a heuristic evaluation function is applied to estimate the desirability of the corresponding game state for the player.
           </p>
           <br></br>
           <p>
             The algorithm alternates between two objectives: <span className="word-highlight">maximizing</span> the score at levels corresponding to the player's turn 
-            and <span className="word-highlight">minimizing</span> it at levels representing the opponent's turn, under the assumption that both players play optimally.
+            and <span className="word-highlight">minimizing</span> it at levels representing the opponent's turn, under the assumption that both players play optimally. 
             By recursively propagating these values back through the tree, the minimax algorithm identifies the sequence of moves that leads to the most favorable outcome for the player. 
             This method is <span className="word-highlight">effective</span> but as the depth of the search is increased the <span className="word-highlight">computational complexity is increased.</span>
           </p>
@@ -276,7 +276,7 @@ private static int score(final Player player,
           <br></br>
           <p>
             So whats going on in the above code? 
-            The min and max methods are part of the Min-Max <span className="word-highlight">algorithm used to evaluate the best moves in a chess game.</span> 
+            The min and max methods are part of the Min-Max <span className="word-highlight">algorithm used to evaluate the best moves in a chess game. </span> 
             The min method tries to find the lowest score (worst case) for the opponent, 
             while the max method looks for the highest score (best case) for the player. 
             Both methods work recursively by simulating all possible moves for the current player. 
@@ -308,7 +308,7 @@ private static int score(final Player player,
           <p>
             The key idea behind Alpha-Beta Pruning is that <span className="word-highlight">once a move is found to be worse than an already evaluated option for the player, 
             there is no point in continuing to evaluate the rest of that moves tree.</span> For example, if the minimizing player finds a move with a 
-            value lower than or equal to the current alpha value of the maximizing player, then the maximizing player will never choose that branch,
+            value lower than or equal to the current alpha value of the maximizing player, then the maximizing player will never choose that branch, 
             and the algorithm can safely stop evaluating it.
           </p>
         </div>
@@ -324,7 +324,7 @@ private static int score(final Player player,
         </div>
         <div className="chess-game-description">
           <p>
-            Lets break down the diagram of the Alpha-Beta Pruning Algorithm. The process we just went over happens when the algorithm
+            Lets break down the diagram of the Alpha-Beta Pruning Algorithm. The process we just went over happens when the algorithm 
             is exploring the left branch of node B. Node D's evaluation results in a score of 3, which is passed up to B as its current beta 
             value (the minimizing player is seeking to reduce the score). When the algorithm evaluates node E, it encounters a terminal 
             value of 5. Since this value is greater than the current beta of 3, it is clear that this branch cannot 
@@ -336,7 +336,7 @@ private static int score(final Player player,
             Similarly, when the algorithm explores the right branch of node A, it evaluates node C. At node F, the 
             best value found is 1, which is passed up to C as its beta value. When the algorithm reaches node G, 
             it finds a value of 7, which is greater than C's beta value of 1. Since the minimizing player at C will 
-            never select a move with a value higher than 1, the algorithm <span className="word-highlight">prunes</span> the rest of G's subtree, avoiding
+            never select a move with a value higher than 1, the algorithm <span className="word-highlight">prunes</span> the rest of G's subtree, avoiding 
             any unnecessary computation.
           </p>
           <br></br>
@@ -362,7 +362,7 @@ private static int score(final Player player,
             The min function is responsible for simulating the minimizing player (the opponent) and finding the 
             lowest evaluation score that the maximizing player might face. It takes the current board state, the 
             remaining search depth, and the current alpha (highest) and beta (lowest) values as parameters. 
-            First, <span className="word-highlight">the function checks if the search depth has reached zero or if the game is in an endgame state.
+            First, <span className="word-highlight">the function checks if the search depth has reached zero or if the game is in an endgame state. 
             If so, it evaluates the board position using a predefined evaluator, increments the count of evaluated 
             boards, and returns the evaluation score.</span>
           </p>
@@ -528,13 +528,13 @@ private static int score(final Player player,
           </div>
           <p>
             The topics we discussed about my Scorpion Chess are <span className="word-highlight">a core part of only the AI side of the game.</span> There is so much more to go into 
-            involving the logic and the actual engine of the game. If you stuck through that VERY long read, I hope you for one, enjoyed it, and two
+            involving the logic and the actual engine of the game. If you stuck through that VERY long read, I hope you for one, enjoyed it, and two 
             felt inspired to maybe try creating your own chess game. Chess has been a passion of mine for the last few years, so working on this project 
             was extremely fullfilling and enjoyable. 
           </p>
           <br></br>
           <p>
-            Please check out <span className="word-highlight">"Software Architecture & Design"</span> and <span className="word-highlight">"Sebastian Lague"</span> on youtube as their videos and walkthroughs
+            Please check out <span className="word-highlight">"Software Architecture & Design"</span> and <span className="word-highlight">"Sebastian Lague"</span> on youtube as their videos and walkthroughs 
             have been invaluable to me as I worked on this project along side their series. <span className="word-highlight">I have included links to their channels below.</span>
           </p>
           <br></br>

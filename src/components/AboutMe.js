@@ -20,7 +20,7 @@ const AboutMe = () => {
         <p>
           Hi, I'm <span className="word-highlight">Samuel Espinal,</span> a passionate software developer with expertise in Java and Python.
           I have a deep love for creating innovative projects, whether it's crafting a smart chess engine,
-          developing and RPG game from scratch, or experimenting with AI chatbots and Machine Learning.
+          developing an RPG game from scratch, or experimenting with AI chatbots and Machine Learning.
         </p>
         <p>
           My journey in software development is fueled by my curiosity and excitement for solving problems and taking my interests and turning them into a project.
